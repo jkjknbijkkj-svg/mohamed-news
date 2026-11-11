@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block css %}
+.big { font-size: 76px; font-weight: 800; line-height: 1.3; }
+.sub { font-size: 40px; line-height: 1.7; opacity: .95; }
+.handle { direction: ltr; text-align: right; font-size: 56px; font-weight: 800; color: var(--accent); }
+{% endblock %}
+{% block main %}
+<div class="big">{{ heading }}</div>
+<div class="rule"></div>
+<div class="sub">{{ sub|bdi }}</div>
+<div class="handle">{{ handle }}</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block css %}
+.title { height: 150px; font-weight: 800; line-height: 1.3; overflow: hidden; }
+.body { height: 560px; font-weight: 500; line-height: 1.7; overflow: hidden; }
+.code { direction: ltr; text-align: left; height: 560px; overflow: hidden; background: rgba(0,0,0,.45); border-radius: 24px; padding: 32px;
+  font-family: 'DejaVu Sans Mono', 'Liberation Mono', monospace; line-height: 1.6; white-space: pre-wrap; word-break: break-all; }
+.stat-row { display: flex; justify-content: space-between; font-size: 38px; padding: 22px 0; border-bottom: 2px solid rgba(255,255,255,.2); }
+.stat-row span:last-child { direction: ltr; font-weight: 800; }
+{% endblock %}
+{% block main %}
+<div class="title" data-fit="title" data-max="64" data-min="44">{{ title }}</div>
+<div class="rule"></div>
+{% if commands %}
+<div class="code" data-fit="code" data-max="34" data-min="20">{% for c in commands %}$ {{ c }}
+{% endfor %}</div>
+{% elif stats %}
+<div>{% for label, value in stats %}<div class="stat-row"><span>{{ label }}</span><span>{{ value }}</span></div>{% endfor %}</div>
+{% else %}
+<div class="body" data-fit="body" data-max="42" data-min="30">{{ body|bdi }}</div>
+{% endif %}
+{% endblock %}
+{% block footer %}<span>{{ footer_left|bdi }}</span><span>{{ handle|bdi }}</span>{% endblock %}

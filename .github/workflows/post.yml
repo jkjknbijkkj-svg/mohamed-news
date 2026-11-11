@@ -1,0 +1,73 @@
+name: post
+
+on:
+  schedule:
+    - cron: "35 6 * * *"
+    - cron: "5 11 * * *"
+    - cron: "35 16 * * *"
+    - cron: "35 19 * * *"
+    - cron: "35 17 * * 5"
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "auto or a slot id (s0800, s1230, s1800, s2100, weekly)"
+        default: "auto"
+      dry_run:
+        description: "render only, do not publish"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Run
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m newsbot run --slot "${{ inputs.slot || 'auto' }}" ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && '--dry-run' || '' }}
+
+      - name: Upload rendered images
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-images
+          path: out/
+          if-no-files-found: ignore

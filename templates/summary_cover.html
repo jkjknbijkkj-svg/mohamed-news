@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block css %}
+.big { font-size: 96px; font-weight: 800; line-height: 1.25; }
+.sub { font-size: 42px; line-height: 1.7; opacity: .95; }
+{% endblock %}
+{% block main %}
+<div class="big">ملخص الأسبوع</div>
+<div class="rule"></div>
+<div class="sub">أهم {{ count }} أخبار: الذكاء الاصطناعي والتجارة الإلكترونية وأخبار الشركات</div>
+<div class="sub">{{ date_range }}</div>
+{% endblock %}

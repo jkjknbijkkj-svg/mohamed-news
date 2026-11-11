@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block css %}
+.headline { height: 440px; font-weight: 800; line-height: 1.4; overflow: hidden; }
+.summary { height: 430px; font-weight: 500; line-height: 1.65; overflow: hidden; opacity: .95; }
+{% endblock %}
+{% block main %}
+<div class="headline" data-fit="headline" data-max="72" data-min="44">{{ headline|bdi }}</div>
+<div class="rule"></div>
+<div class="summary" data-fit="summary" data-max="38" data-min="30">{{ summary|bdi }}</div>
+{% endblock %}
+{% block footer %}<span>المصدر: {{ source_name|bdi }}</span><span>{{ handle|bdi }}</span>{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block css %}
+.top { display: flex; align-items: center; gap: 24px; height: 70px; }
+.num { width: 70px; height: 70px; border-radius: 50%; background: var(--accent); color: #0b1020; font-size: 40px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.item-cat { font-size: 32px; font-weight: 700; opacity: .9; }
+.headline { height: 360px; font-weight: 800; line-height: 1.4; overflow: hidden; }
+.summary { height: 360px; font-weight: 500; line-height: 1.65; overflow: hidden; opacity: .95; }
+{% endblock %}
+{% block main %}
+<div class="top"><div class="num">{{ index }}</div><div class="item-cat">{{ item_label }}</div></div>
+<div class="headline" data-fit="headline" data-max="64" data-min="40">{{ headline|bdi }}</div>
+<div class="rule"></div>
+<div class="summary" data-fit="summary" data-max="38" data-min="30">{{ summary|bdi }}</div>
+{% endblock %}

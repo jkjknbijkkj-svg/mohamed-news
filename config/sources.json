@@ -1,0 +1,83 @@
+{
+  "limits": {
+    "max_age_hours": 36,
+    "timeout_seconds": 20,
+    "max_items_per_feed": 30,
+    "min_text_chars": 400,
+    "max_text_chars": 12000
+  },
+  "scoring": {
+    "official_bonus": 3,
+    "tier_weights": {"1": 3, "2": 2, "3": 1},
+    "extra_source_bonus": 2,
+    "impact_keyword_bonus": 1,
+    "impact_keyword_cap": 4,
+    "hn_signal_bonus": 2,
+    "recency_half_life_hours": 12
+  },
+  "low_value_patterns": [
+    "best ", "deal", "deals", "discount", "coupon", "giveaway", "review:",
+    " review", "hands-on", "buying guide", "how to", "tips", "podcast",
+    "newsletter", "sponsored", "black friday", "cyber monday", "gift guide",
+    "weekly roundup", "this week in"
+  ],
+  "impact_keywords": {
+    "ai": [
+      "launch", "launches", "releases", "released", "introduces", "announces",
+      "unveils", "model", "agent", "agents", "open-source", "open source",
+      "benchmark", "funding", "raises", "acquires", "acquisition", "regulation",
+      "partnership", "chip", "gpu", "gemini", "gpt", "claude", "llama",
+      "mistral", "deepseek", "qwen"
+    ],
+    "companies": [
+      "acquires", "acquisition", "raises", "funding", "layoffs", "launches",
+      "unveils", "announces", "ipo", "earnings", "revenue", "partnership",
+      "lawsuit", "antitrust", "outage", "shuts down", "price", "plans"
+    ],
+    "ecommerce": [
+      "shopify", "amazon", "temu", "shein", "tiktok shop", "alibaba",
+      "aliexpress", "ebay", "marketplace", "checkout", "payments", "logistics",
+      "shipping", "fulfillment", "tariff", "customs", "launch", "launches",
+      "update", "ai agent", "agentic commerce"
+    ]
+  },
+  "github": {
+    "window_days": 30,
+    "min_stars": 150,
+    "candidates": 20,
+    "readme_max_chars": 8000,
+    "boost_topics": [
+      "ai", "agent", "agents", "llm", "automation", "ecommerce",
+      "developer-tools", "python", "typescript", "rag", "mcp"
+    ]
+  },
+  "signals": [
+    {
+      "id": "hacker-news",
+      "type": "hn",
+      "url": "https://hacker-news.firebaseio.com/v0/topstories.json",
+      "item_url": "https://hacker-news.firebaseio.com/v0/item/{id}.json",
+      "top_n": 60
+    }
+  ],
+  "sources": [
+    {"id": "openai-news", "name": "OpenAI", "category": "ai", "also_categories": ["companies"], "type": "rss", "url": "https://openai.com/news/rss.xml", "official": true, "tier": 1, "domain": "openai.com"},
+    {"id": "deepmind", "name": "Google DeepMind", "category": "ai", "also_categories": ["companies"], "type": "rss", "url": "https://deepmind.google/blog/rss.xml", "official": true, "tier": 1, "domain": "deepmind.google", "aliases": ["blog.google"]},
+    {"id": "google-ai", "name": "Google", "category": "ai", "also_categories": ["companies"], "type": "rss", "url": "https://blog.google/innovation-and-ai/technology/ai/rss/", "official": true, "tier": 1, "domain": "blog.google"},
+    {"id": "google-research", "name": "Google Research", "category": "ai", "type": "rss", "url": "https://research.google/blog/rss/", "official": true, "tier": 2, "domain": "research.google"},
+    {"id": "huggingface", "name": "Hugging Face", "category": "ai", "type": "rss", "url": "https://huggingface.co/blog/feed.xml", "official": true, "tier": 2, "domain": "huggingface.co"},
+    {"id": "mistral", "name": "Mistral AI", "category": "ai", "also_categories": ["companies"], "type": "rss", "url": "https://mistral.ai/news/rss", "official": true, "tier": 2, "domain": "mistral.ai"},
+    {"id": "microsoft-ai", "name": "Microsoft", "category": "ai", "also_categories": ["companies"], "type": "rss", "url": "https://news.microsoft.com/source/topics/ai/feed/", "official": true, "tier": 1, "domain": "news.microsoft.com", "aliases": ["microsoft.com", "blogs.microsoft.com"]},
+    {"id": "techcrunch-ai", "name": "TechCrunch", "category": "ai", "type": "rss", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "official": false, "tier": 2, "domain": "techcrunch.com"},
+    {"id": "ars-ai", "name": "Ars Technica", "category": "ai", "type": "rss", "url": "https://arstechnica.com/ai/feed/", "official": false, "tier": 2, "domain": "arstechnica.com"},
+    {"id": "techcrunch", "name": "TechCrunch", "category": "companies", "type": "rss", "url": "https://techcrunch.com/feed/", "official": false, "tier": 2, "domain": "techcrunch.com"},
+    {"id": "theverge", "name": "The Verge", "category": "companies", "type": "rss", "url": "https://www.theverge.com/rss/index.xml", "official": false, "tier": 2, "domain": "theverge.com"},
+    {"id": "ars-all", "name": "Ars Technica", "category": "companies", "type": "rss", "url": "https://feeds.arstechnica.com/arstechnica/index", "official": false, "tier": 2, "domain": "arstechnica.com"},
+    {"id": "wired", "name": "Wired", "category": "companies", "type": "rss", "url": "https://www.wired.com/feed/rss", "official": false, "tier": 2, "domain": "wired.com"},
+    {"id": "geekwire", "name": "GeekWire", "category": "companies", "type": "rss", "url": "https://www.geekwire.com/feed/", "official": false, "tier": 3, "domain": "geekwire.com"},
+    {"id": "practical-ecommerce", "name": "Practical Ecommerce", "category": "ecommerce", "type": "rss", "url": "https://www.practicalecommerce.com/feed", "official": false, "tier": 3, "domain": "practicalecommerce.com"},
+    {"id": "ecommerce-times", "name": "E-Commerce Times", "category": "ecommerce", "type": "rss", "url": "https://www.ecommercetimes.com/rss-feed", "official": false, "tier": 3, "domain": "ecommercetimes.com"},
+    {"id": "ecommerce-news-eu", "name": "Ecommerce News Europe", "category": "ecommerce", "type": "rss", "url": "https://ecommercenews.eu/feed", "official": false, "tier": 3, "domain": "ecommercenews.eu"},
+    {"id": "woocommerce", "name": "WooCommerce", "category": "ecommerce", "type": "rss", "url": "https://woocommerce.com/blog/feed/", "official": true, "tier": 3, "domain": "woocommerce.com"}
+  ]
+}

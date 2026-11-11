@@ -1,0 +1,18 @@
+{
+  "source_blocklist": [
+    "porn", "nsfw", "onlyfans", "casino", "betting", "gambling", "airdrop",
+    "pump and dump", "rug pull", "election", "airstrike", "terror attack",
+    "shooting", "murder", "suicide", "massacre", "war crime"
+  ],
+  "rumor_phrases_ar": [
+    "يُشاع", "يشاع", "قيل إن", "يُقال", "يقال إن", "مصادر مجهولة",
+    "تسريبات غير مؤكدة", "بحسب شائعات"
+  ],
+  "advice_phrases_ar": [
+    "توصية شراء", "اشترِ السهم", "اشتر السهم", "سهم سيرتفع", "ضمان الربح",
+    "أرباح مضمونة", "نصيحة استثمارية", "فرصة لا تعوّض"
+  ],
+  "spam_phrases_ar": [
+    "اضغط هنا", "اشترك الآن", "مضمون 100%", "!!!"
+  ]
+}

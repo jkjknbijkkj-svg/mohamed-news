@@ -1,0 +1,14 @@
+{
+  "timezone": "Africa/Algiers",
+  "window": {
+    "early_minutes": 40,
+    "late_minutes": 90
+  },
+  "slots": [
+    {"id": "s0800", "time": "08:00", "category": "ai", "format": "single", "days": [0, 1, 2, 3, 4, 5, 6], "reassignable": true},
+    {"id": "s1230", "time": "12:30", "category": "ecommerce", "format": "single", "days": [0, 1, 2, 3, 4, 5, 6], "reassignable": true},
+    {"id": "s1800", "time": "18:00", "category": "companies", "format": "single", "days": [0, 1, 2, 3, 4, 5, 6], "reassignable": true},
+    {"id": "s2100", "time": "21:00", "category": "github", "format": "carousel", "days": [0, 1, 2, 3, 4, 5, 6], "reassignable": false},
+    {"id": "weekly", "time": "19:00", "category": "weekly", "format": "weekly", "days": [4], "reassignable": false}
+  ]
+}
