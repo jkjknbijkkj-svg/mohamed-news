@@ -1,0 +1,15 @@
+{
+  "consecutive_failures": 1,
+  "insights": [],
+  "llm_usage": {},
+  "pending": {},
+  "posted_repos": {},
+  "published": [],
+  "seen_urls": {},
+  "token": {
+    "issued_at": null,
+    "last_refresh": null,
+    "last_refresh_error": null
+  },
+  "version": 1
+}
