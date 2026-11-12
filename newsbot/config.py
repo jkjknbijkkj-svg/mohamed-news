@@ -111,7 +111,7 @@ class Settings:
             gemini_model=get("GEMINI_MODEL", "gemini-3.6-flash"),
             gemini_fallback_models=fallbacks,
             llm_daily_budget=_env_int("LLM_DAILY_BUDGET", 16),
-            ig_graph_base=get("IG_GRAPH_BASE", "https://graph.instagram.com"),
+            ig_graph_base=get("IG_GRAPH_BASE") or ("https://graph.facebook.com" if get("IG_ACCESS_TOKEN").startswith("EAA") else "https://graph.instagram.com"),
             ig_api_version=get("IG_API_VERSION"),
             repository=get("GITHUB_REPOSITORY", DEFAULT_REPOSITORY),
             branch=get("GITHUB_BRANCH", DEFAULT_BRANCH),
