@@ -1,12 +1,12 @@
 {
-  "consecutive_failures": 1,
+  "consecutive_failures": 2,
   "insights": [],
   "llm_usage": {
     "2026-11-12": {
       "gemini-3.6-flash": 2
     },
     "2026-11-13": {
-      "gemini-3.6-flash": 1
+      "gemini-3.6-flash": 2
     }
   },
   "pending": {},
