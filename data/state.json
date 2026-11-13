@@ -1,9 +1,12 @@
 {
-  "consecutive_failures": 1,
+  "consecutive_failures": 0,
   "insights": [],
   "llm_usage": {
     "2026-11-12": {
       "gemini-3.6-flash": 2
+    },
+    "2026-11-13": {
+      "gemini-3.6-flash": 1
     }
   },
   "pending": {},
@@ -29,9 +32,31 @@
       "summary": "أعلنت شركة Google عن إطلاق نموذج Gemini 4 Hydrogen الذي يهدف إلى توفير سرعة وكفاءة أعلى في كتابة البرمجيات وتنفيذ المهام. يتميز النموذج بأربعة مستويات تفكير تناسب توازن السرعة والتكلفة، مع إمكانية التكامل مع نموذج Carbon. كما يعالج النصوص والصور والفيديو عبر نافذة سياق تصل إلى مليون رمز، مع تقديم مستويات أمان أفضل.",
       "timestamp": "2026-11-12T23:46:52Z",
       "title": "Introducing Gemini 4 Hydrogen"
+    },
+    {
+      "category": "companies",
+      "date": "2026-11-13",
+      "hashtags": [
+        "محرك_البحث",
+        "تقنية_المعلومات",
+        "تحديثات_تكنولوجية",
+        "ذكاء_اصطناعي"
+      ],
+      "headline": "Google تطور محرك Google Search عبر دمج نموذج Gemini 4 Hydrogen الجديد عالميا",
+      "ig_media_id": "18025872566713070",
+      "permalink": "https://www.instagram.com/p/DfsKTV6F018/",
+      "slot": "s1800",
+      "source_name": "Google",
+      "source_urls": [
+        "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade"
+      ],
+      "summary": "أطلقت Google نموذج Gemini 4 Hydrogen لجميع مستخدمي Google Search حول العالم. يتيح التحديث فهم الأسئلة المعقدة ومصطلحات البحث المتعددة مع تقديم نتائج مرئية وجداول مقارنة. كما يعمل النظام على الربط بمصادر متنوعة لتحسين جودة الإجابات بمختلف اللغات المدعومة في AI Mode.",
+      "timestamp": "2026-11-13T17:24:36Z",
+      "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen"
     }
   ],
   "seen_urls": {
+    "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z"
   },
   "token": {
