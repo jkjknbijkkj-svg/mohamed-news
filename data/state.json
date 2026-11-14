@@ -1,12 +1,12 @@
 {
-  "consecutive_failures": 2,
+  "consecutive_failures": 0,
   "insights": [],
   "llm_usage": {
     "2026-11-12": {
       "gemini-3.6-flash": 2
     },
     "2026-11-13": {
-      "gemini-3.6-flash": 2
+      "gemini-3.6-flash": 5
     }
   },
   "pending": {},
@@ -53,11 +53,33 @@
       "summary": "أطلقت Google نموذج Gemini 4 Hydrogen لجميع مستخدمي Google Search حول العالم. يتيح التحديث فهم الأسئلة المعقدة ومصطلحات البحث المتعددة مع تقديم نتائج مرئية وجداول مقارنة. كما يعمل النظام على الربط بمصادر متنوعة لتحسين جودة الإجابات بمختلف اللغات المدعومة في AI Mode.",
       "timestamp": "2026-11-13T17:24:36Z",
       "title": "Google Search gets a major upgrade with Gemini 4 Hydrogen"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-14",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "أبحاث_علمية",
+        "تكنولوجيا",
+        "علوم_الحاسوب"
+      ],
+      "headline": "تطوير أنظمة ذكاء اصطناعي في Google Research لحل مسائل علمية ورياضية معقدة",
+      "ig_media_id": "18132855092512921",
+      "permalink": "https://www.instagram.com/p/DfttASblN3A/",
+      "slot": "s0800",
+      "source_name": "Google Research",
+      "source_urls": [
+        "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature"
+      ],
+      "summary": "شارك خبراء من Google Research ومؤسسات أكاديمية في استخدام أنظمة /teamwork عبر نماذج Gemini 4 لمعالجة معضلات علمية مستمرة منذ سنوات. وتعتمد هذه الأنظمة على تقسيم المهام وتدقيق النتائج والمعادلات باستخدام أدوات مثل Lean 4 للتأكد من صحتها. وتشمل الإنجازات حل مسائل في نظرية المعلومات ومعالجة المصفوفات وتصميم الخوارزميات. وتعمل الشركة على إتاحة هذه الأدوات للباحثين والمطورين خارجياً.",
+      "timestamp": "2026-11-14T07:47:06Z",
+      "title": "Advancing science & engineering with Antigravity’s /teamwork"
     }
   ],
   "seen_urls": {
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
-    "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z"
+    "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
+    "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z"
   },
   "token": {
     "issued_at": null,
