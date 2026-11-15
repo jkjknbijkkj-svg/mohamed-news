@@ -1,6 +1,12 @@
 {
   "consecutive_failures": 3,
-  "insights": [],
+  "insights": [
+    {
+      "date": "2026-11-15",
+      "followers": 2,
+      "posts_measured": 0
+    }
+  ],
   "llm_usage": {
     "2026-11-12": {
       "gemini-3.6-flash": 2
@@ -85,7 +91,7 @@
     "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z"
   },
   "token": {
-    "issued_at": null,
+    "issued_at": "2026-11-15T09:38:32Z",
     "last_refresh": null,
     "last_refresh_error": null
   },
