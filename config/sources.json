@@ -15,6 +15,15 @@
     "hn_signal_bonus": 2,
     "recency_half_life_hours": 12
   },
+  "diversity": {
+    "window_hours": 48,
+    "penalty": 4,
+    "outlet_groups": {
+      "deepmind.google": "google",
+      "blog.google": "google",
+      "research.google": "google"
+    }
+  },
   "low_value_patterns": [
     "best ", "deal", "deals", "discount", "coupon", "giveaway", "review:",
     " review", "hands-on", "buying guide", "how to", "tips", "podcast",
@@ -68,6 +77,14 @@
     {"id": "huggingface", "name": "Hugging Face", "category": "ai", "type": "rss", "url": "https://huggingface.co/blog/feed.xml", "official": true, "tier": 2, "domain": "huggingface.co"},
     {"id": "mistral", "name": "Mistral AI", "category": "ai", "also_categories": ["companies"], "type": "rss", "url": "https://mistral.ai/news/rss", "official": true, "tier": 2, "domain": "mistral.ai"},
     {"id": "microsoft-ai", "name": "Microsoft", "category": "ai", "also_categories": ["companies"], "type": "rss", "url": "https://news.microsoft.com/source/topics/ai/feed/", "official": true, "tier": 1, "domain": "news.microsoft.com", "aliases": ["microsoft.com", "blogs.microsoft.com"]},
+    {"id": "nvidia-ai", "name": "NVIDIA", "category": "ai", "also_categories": ["companies"], "type": "rss", "url": "https://blogs.nvidia.com/feed/", "official": true, "tier": 2, "domain": "blogs.nvidia.com", "aliases": ["nvidia.com"]},
+    {"id": "aws-ml", "name": "AWS", "category": "ai", "also_categories": ["companies"], "type": "rss", "url": "https://aws.amazon.com/blogs/machine-learning/feed/", "official": true, "tier": 2, "domain": "aws.amazon.com"},
+    {"id": "mit-news-ai", "name": "MIT News", "category": "ai", "type": "rss", "url": "https://news.mit.edu/rss/topic/artificial-intelligence2", "official": false, "tier": 1, "domain": "news.mit.edu"},
+    {"id": "bair-berkeley", "name": "Berkeley AI Research", "category": "ai", "type": "rss", "url": "https://bair.berkeley.edu/blog/feed.xml", "official": true, "tier": 2, "domain": "bair.berkeley.edu"},
+    {"id": "ieee-spectrum-ai", "name": "IEEE Spectrum", "category": "ai", "type": "rss", "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss", "official": false, "tier": 2, "domain": "spectrum.ieee.org"},
+    {"id": "venturebeat-ai", "name": "VentureBeat", "category": "ai", "also_categories": ["companies"], "type": "rss", "url": "https://venturebeat.com/category/ai/feed/", "official": false, "tier": 2, "domain": "venturebeat.com"},
+    {"id": "the-decoder", "name": "The Decoder", "category": "ai", "type": "rss", "url": "https://the-decoder.com/feed/", "official": false, "tier": 2, "domain": "the-decoder.com"},
+    {"id": "marktechpost", "name": "MarkTechPost", "category": "ai", "type": "rss", "url": "https://www.marktechpost.com/feed/", "official": false, "tier": 3, "domain": "marktechpost.com"},
     {"id": "techcrunch-ai", "name": "TechCrunch", "category": "ai", "type": "rss", "url": "https://techcrunch.com/category/artificial-intelligence/feed/", "official": false, "tier": 2, "domain": "techcrunch.com"},
     {"id": "ars-ai", "name": "Ars Technica", "category": "ai", "type": "rss", "url": "https://arstechnica.com/ai/feed/", "official": false, "tier": 2, "domain": "arstechnica.com"},
     {"id": "techcrunch", "name": "TechCrunch", "category": "companies", "type": "rss", "url": "https://techcrunch.com/feed/", "official": false, "tier": 2, "domain": "techcrunch.com"},
@@ -75,9 +92,21 @@
     {"id": "ars-all", "name": "Ars Technica", "category": "companies", "type": "rss", "url": "https://feeds.arstechnica.com/arstechnica/index", "official": false, "tier": 2, "domain": "arstechnica.com"},
     {"id": "wired", "name": "Wired", "category": "companies", "type": "rss", "url": "https://www.wired.com/feed/rss", "official": false, "tier": 2, "domain": "wired.com"},
     {"id": "geekwire", "name": "GeekWire", "category": "companies", "type": "rss", "url": "https://www.geekwire.com/feed/", "official": false, "tier": 3, "domain": "geekwire.com"},
+    {"id": "engadget", "name": "Engadget", "category": "companies", "type": "rss", "url": "https://www.engadget.com/rss.xml", "official": false, "tier": 2, "domain": "engadget.com"},
+    {"id": "the-register", "name": "The Register", "category": "companies", "type": "rss", "url": "https://www.theregister.com/headlines.atom", "official": false, "tier": 2, "domain": "theregister.com"},
+    {"id": "techradar", "name": "TechRadar", "category": "companies", "type": "rss", "url": "https://www.techradar.com/rss", "official": false, "tier": 3, "domain": "techradar.com"},
+    {"id": "bbc-tech", "name": "BBC", "category": "companies", "type": "rss", "url": "https://feeds.bbci.co.uk/news/technology/rss.xml", "official": false, "tier": 1, "domain": "bbc.com", "aliases": ["bbc.co.uk"]},
+    {"id": "cnbc-tech", "name": "CNBC", "category": "companies", "type": "rss", "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=19854910", "official": false, "tier": 1, "domain": "cnbc.com"},
+    {"id": "tnw", "name": "The Next Web", "category": "companies", "type": "rss", "url": "https://thenextweb.com/feed", "official": false, "tier": 3, "domain": "thenextweb.com"},
     {"id": "practical-ecommerce", "name": "Practical Ecommerce", "category": "ecommerce", "type": "rss", "url": "https://www.practicalecommerce.com/feed", "official": false, "tier": 3, "domain": "practicalecommerce.com"},
     {"id": "ecommerce-times", "name": "E-Commerce Times", "category": "ecommerce", "type": "rss", "url": "https://www.ecommercetimes.com/rss-feed", "official": false, "tier": 3, "domain": "ecommercetimes.com"},
     {"id": "ecommerce-news-eu", "name": "Ecommerce News Europe", "category": "ecommerce", "type": "rss", "url": "https://ecommercenews.eu/feed", "official": false, "tier": 3, "domain": "ecommercenews.eu"},
-    {"id": "woocommerce", "name": "WooCommerce", "category": "ecommerce", "type": "rss", "url": "https://woocommerce.com/blog/feed/", "official": true, "tier": 3, "domain": "woocommerce.com"}
+    {"id": "woocommerce", "name": "WooCommerce", "category": "ecommerce", "type": "rss", "url": "https://woocommerce.com/blog/feed/", "official": true, "tier": 3, "domain": "woocommerce.com"},
+    {"id": "retail-dive", "name": "Retail Dive", "category": "ecommerce", "type": "rss", "url": "https://www.retaildive.com/feeds/news/", "official": false, "tier": 2, "domain": "retaildive.com"},
+    {"id": "digital-commerce-360", "name": "Digital Commerce 360", "category": "ecommerce", "type": "rss", "url": "https://www.digitalcommerce360.com/feed/", "official": false, "tier": 2, "domain": "digitalcommerce360.com"},
+    {"id": "modern-retail", "name": "Modern Retail", "category": "ecommerce", "type": "rss", "url": "https://www.modernretail.co/feed/", "official": false, "tier": 2, "domain": "modernretail.co"},
+    {"id": "shopify-blog", "name": "Shopify", "category": "ecommerce", "also_categories": ["companies"], "type": "rss", "url": "https://www.shopify.com/blog.atom", "official": true, "tier": 2, "domain": "shopify.com"},
+    {"id": "bigcommerce-blog", "name": "BigCommerce", "category": "ecommerce", "type": "rss", "url": "https://www.bigcommerce.com/blog/feed/", "official": true, "tier": 3, "domain": "bigcommerce.com"},
+    {"id": "pymnts", "name": "PYMNTS", "category": "ecommerce", "also_categories": ["companies"], "type": "rss", "url": "https://www.pymnts.com/feed/", "official": false, "tier": 3, "domain": "pymnts.com"}
   ]
 }
