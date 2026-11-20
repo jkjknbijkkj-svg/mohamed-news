@@ -7,7 +7,7 @@ from typing import Any
 
 from rapidfuzz import fuzz
 
-from .collect import contains_term
+from .collect import contains_term, host_of
 from .models import Candidate, Item
 from .state import State, from_iso
 
@@ -42,6 +42,40 @@ def _choose_primary(items: list[Item]) -> Item:
     )
 
 
+def outlet_group(domain: str, diversity: dict[str, Any]) -> str:
+    """Collapse related feeds (e.g. the three Google feeds) to one label.
+
+    A domain with no explicit mapping is its own outlet, so same-domain
+    feeds (the two TechCrunch feeds, the Ars feeds) already share a label.
+    """
+    groups = diversity.get("outlet_groups", {})
+    return groups.get(domain.lower(), domain.lower())
+
+
+def recent_outlets(
+    state: State, diversity: dict[str, Any], now: datetime
+) -> set[str]:
+    """Outlet labels that were published within the diversity window."""
+    window = float(diversity.get("window_hours", 48))
+    if window <= 0:
+        return set()
+    cutoff = now - timedelta(hours=window)
+    recent: set[str] = set()
+    for entry in state.data["published"]:
+        stamp = entry.get("timestamp")
+        if not stamp:
+            continue
+        try:
+            when = from_iso(stamp)
+        except ValueError:
+            continue
+        if when < cutoff:
+            continue
+        for url in entry.get("source_urls", []):
+            recent.add(outlet_group(host_of(url), diversity))
+    return recent
+
+
 def _score(
     cluster: list[Item],
     primary: Item,
@@ -49,8 +83,10 @@ def _score(
     cfg: dict[str, Any],
     hn_urls: set[str],
     now: datetime,
+    recent: set[str],
 ) -> float:
     scoring = cfg["scoring"]
+    diversity = cfg.get("diversity", {})
     tier_weights = scoring["tier_weights"]
     best_tier = min(item.tier for item in cluster)
     score = float(tier_weights.get(str(best_tier), 1))
@@ -66,6 +102,10 @@ def _score(
         score += scoring["hn_signal_bonus"]
     age_hours = max((now - primary.published).total_seconds() / 3600, 0.0)
     score += 3 * 0.5 ** (age_hours / scoring["recency_half_life_hours"])
+    # Diversity governor: demote an outlet that already appeared in the
+    # window so no single source (or the shared Google label) dominates.
+    if recent and outlet_group(primary.domain, diversity) in recent:
+        score -= float(diversity.get("penalty", 4))
     return score
 
 
@@ -87,6 +127,7 @@ def pick_candidates(
         or (now - item.published).total_seconds() < 0 and (item.published - now) < timedelta(hours=1)
     ]
     recent_titles = state.recent_titles(days=7, now=now)
+    recent = recent_outlets(state, cfg.get("diversity", {}), now)
     result: list[Candidate] = []
     for cluster in _cluster(fresh):
         eligible = [item for item in cluster if category in item.categories]
@@ -107,7 +148,7 @@ def pick_candidates(
             continue
         if any(_similar(primary.title, title) and fuzz.token_set_ratio(primary.title, title) >= 85 for title in recent_titles):
             continue
-        score = _score(cluster, primary, category, cfg, hn_urls, now)
+        score = _score(cluster, primary, category, cfg, hn_urls, now, recent)
         result.append(Candidate(primary, cluster, score, len(domains)))
     result.sort(key=lambda candidate: candidate.score, reverse=True)
     return result[:limit]
