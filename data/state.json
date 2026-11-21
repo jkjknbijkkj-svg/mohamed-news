@@ -16,6 +16,9 @@
     },
     "2026-11-14": {
       "gemini-3.6-flash": 1
+    },
+    "2026-11-20": {
+      "gemini-3.6-flash": 1
     }
   },
   "pending": {},
@@ -83,9 +86,31 @@
       "summary": "شارك خبراء من Google Research ومؤسسات أكاديمية في استخدام أنظمة /teamwork عبر نماذج Gemini 4 لمعالجة معضلات علمية مستمرة منذ سنوات. وتعتمد هذه الأنظمة على تقسيم المهام وتدقيق النتائج والمعادلات باستخدام أدوات مثل Lean 4 للتأكد من صحتها. وتشمل الإنجازات حل مسائل في نظرية المعلومات ومعالجة المصفوفات وتصميم الخوارزميات. وتعمل الشركة على إتاحة هذه الأدوات للباحثين والمطورين خارجياً.",
       "timestamp": "2026-11-14T07:47:06Z",
       "title": "Advancing science & engineering with Antigravity’s /teamwork"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-21",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "تكنولوجيا",
+        "حوسبة_سحابية",
+        "برمجيات"
+      ],
+      "headline": "تحديث نظام Amazon Bedrock AgentCore لتطوير وكلاء الذكاء الاصطناعي وإدارتهم بفعالية",
+      "ig_media_id": "17965513800245211",
+      "permalink": "https://www.instagram.com/p/Df_uuE_jYKH/",
+      "slot": "s0800",
+      "source_name": "AWS",
+      "source_urls": [
+        "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks"
+      ],
+      "summary": "يتضمن التحديث دمج إعدادات افتراضية من Strands لتوفير أدوات مدمجة للتخطيط واسترجاع البيانات وإدارة سياق المحادثات. كما يقدم التحديث خطافات دورة الحياة لتنفيذ رموز برمجية تضمن السلامة وتنظيم العمليات قبل اتخاذ أي إجراءات. تتيح هذه التحسينات تشغيل الوكلاء في بيئة آمنة دون الحاجة لإدارة البنية التحتية.",
+      "timestamp": "2026-11-21T07:48:30Z",
+      "title": "Amazon Bedrock AgentCore harness adds Strands harness defaults, built-in tools, and lifecycle hooks"
     }
   ],
   "seen_urls": {
+    "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks": "2026-11-21T07:48:30Z",
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
     "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z"
