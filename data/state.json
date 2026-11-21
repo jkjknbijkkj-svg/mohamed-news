@@ -19,6 +19,9 @@
     },
     "2026-11-20": {
       "gemini-3.6-flash": 1
+    },
+    "2026-11-21": {
+      "gemini-3.6-flash": 3
     }
   },
   "pending": {},
@@ -107,13 +110,35 @@
       "summary": "يتضمن التحديث دمج إعدادات افتراضية من Strands لتوفير أدوات مدمجة للتخطيط واسترجاع البيانات وإدارة سياق المحادثات. كما يقدم التحديث خطافات دورة الحياة لتنفيذ رموز برمجية تضمن السلامة وتنظيم العمليات قبل اتخاذ أي إجراءات. تتيح هذه التحسينات تشغيل الوكلاء في بيئة آمنة دون الحاجة لإدارة البنية التحتية.",
       "timestamp": "2026-11-21T07:48:30Z",
       "title": "Amazon Bedrock AgentCore harness adds Strands harness defaults, built-in tools, and lifecycle hooks"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-21",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "تقنية",
+        "مكالمات_صوتية",
+        "تحديثات_تقنية"
+      ],
+      "headline": "شركة Google تدرج تقنية Google Duplex في Tasks in Gemini لإجراء المكالمات",
+      "ig_media_id": "18002167475822815",
+      "permalink": "https://www.instagram.com/p/DgAKQBFDZa4/",
+      "slot": "s1230",
+      "source_name": "Google Research",
+      "source_urls": [
+        "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini"
+      ],
+      "summary": "أدمجت Google تقنية Google Duplex في تطبيق Tasks in Gemini لمساعدة المستخدمين في تنسيق المهام اليومية. وتستطيع الميزة إجراء مكالمات هاتفية مع الشركات والمتاجر لحجز المواعيد والتحقق من الخدمات. وتعتمد التقنية على نماذج Gemini الحديثة لإدارة الحوارات الصوتية الطبيعية والاستجابة السريعة.",
+      "timestamp": "2026-11-21T11:49:05Z",
+      "title": "How Google Duplex evolved to also call businesses for you in Gemini"
     }
   ],
   "seen_urls": {
     "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks": "2026-11-21T07:48:30Z",
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
-    "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z"
+    "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z",
+    "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini": "2026-11-21T11:49:05Z"
   },
   "token": {
     "issued_at": "2026-11-15T09:38:32Z",
