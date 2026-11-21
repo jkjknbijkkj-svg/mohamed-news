@@ -1,11 +1,15 @@
 {% extends "base.html" %}
 {% block css %}
-.big { font-size: 96px; font-weight: 800; line-height: 1.25; }
-.sub { font-size: 42px; line-height: 1.7; opacity: .95; }
+.big { font-size: 112px; font-weight: 900; line-height: 1.15; color: var(--ink); letter-spacing: -1px; }
+.big span { position: relative; z-index: 0; }
+.big span::after { content: ""; position: absolute; z-index: -1; right: -10px; left: -10px; bottom: 14px; height: 34px; background: var(--to); transform: rotate(-1deg); }
+.sub { font-size: 42px; line-height: 1.7; font-weight: 700; color: var(--ink); }
+.date { display: inline-block; align-self: flex-start; font-size: 36px; font-weight: 800; background: var(--ink); color: var(--paper-light);
+  padding: 8px 30px 10px; transform: rotate(-1.5deg); box-shadow: 6px 6px 0 var(--to); }
 {% endblock %}
 {% block main %}
-<div class="big">ملخص الأسبوع</div>
+<div class="hl"><div class="big">ملخص <span>الأسبوع</span></div></div>
 <div class="rule"></div>
-<div class="sub">أهم {{ count }} أخبار: الذكاء الاصطناعي والتجارة الإلكترونية وأخبار الشركات</div>
-<div class="sub">{{ date_range }}</div>
+<div class="clip"><div class="sub">أهم {{ count }} أخبار: الذكاء الاصطناعي والتجارة الإلكترونية وأخبار الشركات</div></div>
+<div class="date">{{ date_range }}</div>
 {% endblock %}
