@@ -14,6 +14,9 @@ from .state import State, now_utc, to_iso
 log = logging.getLogger(__name__)
 
 
+OPTIONAL_FIELDS = ("is_ai_generated", "alt_text")
+
+
 class PublishError(Exception):
     """Publishing or API call failed."""
 
@@ -27,6 +30,7 @@ class InstagramPublisher:
         self.s = settings
         self.session = requests.Session()
         self.ai_flag = True
+        self.dropped: set[str] = set()
 
     def _call(
         self,
@@ -89,17 +93,27 @@ class InstagramPublisher:
                 raise QuotaError(f"publishing quota reached: {usage}/{total}")
 
     def _create(self, data: dict[str, Any]) -> str:
-        payload = dict(data)
-        if self.ai_flag:
-            payload["is_ai_generated"] = "true"
-        try:
-            return self._call("POST", f"{self.s.ig_user_id}/media", data=payload)["id"]
-        except PublishError as exc:
-            if self.ai_flag and "is_ai_generated" in str(exc):
-                log.warning("is_ai_generated is not accepted by this API; continuing without it")
-                self.ai_flag = False
-                return self._call("POST", f"{self.s.ig_user_id}/media", data=dict(data))["id"]
-            raise
+        """Create a media container, dropping optional fields Instagram rejects.
+
+        Instagram answers "Invalid parameter" (code 100) when an optional field such as
+        is_ai_generated or alt_text is not accepted for this media type or account.
+        Those fields are removed one by one and remembered for the rest of the run.
+        """
+        while True:
+            payload = {k: v for k, v in data.items() if k not in self.dropped}
+            if self.ai_flag and "is_ai_generated" not in self.dropped:
+                payload["is_ai_generated"] = "true"
+            try:
+                return self._call("POST", f"{self.s.ig_user_id}/media", data=payload)["id"]
+            except PublishError as exc:
+                field = next(
+                    (f for f in OPTIONAL_FIELDS if f in payload and (f in str(exc) or "code=100" in str(exc))),
+                    None,
+                )
+                if field is None:
+                    raise
+                log.warning("Instagram rejected the media request (%s); retrying without %s", exc, field)
+                self.dropped.add(field)
 
     def wait_ready(self, container_id: str, timeout: int = 180) -> None:
         deadline = time.time() + timeout
@@ -113,6 +127,18 @@ class InstagramPublisher:
                 raise PublishError(f"container {container_id} status {status}")
             time.sleep(5)
         raise PublishError(f"container {container_id} not ready, last status {status}")
+
+    def _create_carousel(self, image_urls: list[str], caption: str, alt_texts: list[str]) -> str:
+        children: list[str] = []
+        for url, alt in zip(image_urls, alt_texts):
+            children.append(
+                self._create({"image_url": url, "is_carousel_item": "true", "alt_text": alt[:400]})
+            )
+        for child in children:
+            self.wait_ready(child)
+        return self._create(
+            {"media_type": "CAROUSEL", "children": ",".join(children), "caption": caption}
+        )
 
     def permalink(self, media_id: str) -> str:
         try:
@@ -137,18 +163,16 @@ class InstagramPublisher:
                     {"image_url": image_urls[0], "caption": caption, "alt_text": alt_texts[0][:400]}
                 )
             else:
-                children: list[str] = []
-                for url, alt in zip(image_urls, alt_texts):
-                    children.append(
-                        self._create(
-                            {"image_url": url, "is_carousel_item": "true", "alt_text": alt[:400]}
-                        )
+                try:
+                    creation_id = self._create_carousel(image_urls, caption, alt_texts)
+                except QuotaError:
+                    raise
+                except PublishError as exc:
+                    # Better a single-image post on time than no post at all.
+                    log.error("Carousel failed (%s); publishing the cover image alone", exc)
+                    creation_id = self._create(
+                        {"image_url": image_urls[0], "caption": caption, "alt_text": alt_texts[0][:400]}
                     )
-                for child in children:
-                    self.wait_ready(child)
-                creation_id = self._create(
-                    {"media_type": "CAROUSEL", "children": ",".join(children), "caption": caption}
-                )
             state.set_pending(date_iso, slot_id, {"creation_id": creation_id, "created_at": to_iso(now_utc())})
             state.save()
         self.wait_ready(creation_id)

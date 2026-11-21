@@ -25,6 +25,7 @@ from .validate import normalize_github, normalize_news, validate_github, validat
 
 log = logging.getLogger(__name__)
 MAX_LLM_CALLS_PER_SLOT = 4
+FALLBACK_CATEGORIES = ("ai", "companies", "ecommerce")
 
 
 class NoContent(Exception):
@@ -43,11 +44,26 @@ def build_plan(
     now: datetime,
     now_local: datetime,
 ) -> PostPlan:
-    if slot.format == "weekly":
-        return _weekly(state, renderer, slot, out_dir, now, now_local)
-    if slot.format == "carousel" or category == "github":
-        return _github(state, llm, renderer, slot, out_dir, now)
-    return _news(state, llm, renderer, slot, category, out_dir, now)
+    try:
+        if slot.format == "weekly":
+            return _weekly(state, renderer, slot, out_dir, now, now_local)
+        if slot.format == "carousel" or category == "github":
+            return _github(state, llm, renderer, slot, out_dir, now)
+        return _news(state, llm, renderer, slot, category, out_dir, now)
+    except NoContent as exc:
+        first_problem = exc
+    # The planned category had nothing usable: fill the slot with another news category
+    # rather than leaving it empty.
+    problems = [f"{category}: {first_problem}"]
+    for fallback in FALLBACK_CATEGORIES:
+        if fallback == category:
+            continue
+        log.warning("No content for %s (%s); trying %s instead", category, first_problem, fallback)
+        try:
+            return _news(state, llm, renderer, slot, fallback, out_dir, now)
+        except NoContent as exc:
+            problems.append(f"{fallback}: {exc}")
+    raise NoContent(" | ".join(problems))
 
 
 def _gather_text(candidate: Candidate, limits: dict[str, Any]) -> str | None:

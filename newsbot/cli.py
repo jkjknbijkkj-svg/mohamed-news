@@ -23,7 +23,7 @@ from .config import (
 )
 from .igtoken import TokenError, maybe_refresh, validate_token
 from .llm import LLMClient
-from .pipeline import build_plan
+from .pipeline import NoContent, build_plan
 from .publish import InstagramPublisher
 from .render import Renderer
 from .slots import category_for, load_slots, resolve_slot, scheduled_at, slot_by_id
@@ -172,6 +172,19 @@ def cmd_run(args: argparse.Namespace) -> int:
         publisher.check_quota()
         wait_until(target, int(window["early_minutes"]))
         result = publisher.publish_post(urls, plan.caption, plan.alt_texts, state, date_iso, slot.id)
+    except NoContent as exc:
+        # A quiet news day is not a breakage: skip the slot without counting it
+        # towards the automatic pause.
+        message = redact(str(exc))[:400]
+        log.warning("Slot %s skipped, no usable content: %s", slot.id, message)
+        if dry:
+            return 1
+        notify.send(
+            settings,
+            f"ℹ️ <b>تخطّي موعد</b> {slot.id} ({date_iso}): لا يوجد محتوى مناسب.\n"
+            f"السبب: {html.escape(message)}",
+        )
+        return 0
     except Exception as exc:  # noqa: BLE001
         return _handle_failure(settings, state, slot.id, date_iso, stage, exc, dry)
 
