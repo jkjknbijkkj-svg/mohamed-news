@@ -4,32 +4,84 @@
 <meta charset="utf-8">
 <style>
 {{ font_css|safe }}
-:root { --from: {{ style.from_color }}; --to: {{ style.to_color }}; --accent: {{ style.accent }}; }
+:root { --from: {{ style.from_color }}; --to: {{ style.to_color }}; --accent: {{ style.accent }};
+  --paper: #e7e1d3; --paper-light: #f2eddf; --ink: #17140f; --ink-soft: #4a443a; --tape: rgba(214, 196, 156, .72); }
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; width: 1080px; height: 1350px; overflow: hidden; }
-body { font-family: 'Cairo', sans-serif; color: #fff; }
-.slide { position: relative; width: 1080px; height: 1350px; padding: 72px; display: flex; flex-direction: column; direction: rtl;
-  background: linear-gradient(160deg, var(--from) 0%, var(--to) 100%); }
-.slide::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 15% 10%, rgba(255,255,255,0.12), transparent 45%); }
+body { font-family: 'Cairo', sans-serif; color: var(--ink); background: var(--paper); }
+.slide { position: relative; width: 1080px; height: 1350px; padding: 72px; display: flex; flex-direction: column; direction: rtl; overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 45% at 85% 75%, rgba(23,20,15,.07), transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 55%, rgba(74,68,58,.06), transparent 70%),
+    radial-gradient(ellipse 70% 30% at 60% 15%, rgba(255,255,255,.35), transparent 70%),
+    var(--paper); }
+/* vignette */
+.slide::before { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; box-shadow: inset 0 0 200px rgba(23,20,15,.28); }
+/* paper grain (local SVG noise, ~6% black) */
+.slide::after { content: ""; position: absolute; inset: 0; z-index: 5; pointer-events: none; opacity: .06; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='360' height='360'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.6 -.35'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); }
+
+/* decorative collage layer */
+.deco { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.deco > * { position: absolute; }
+.sun { width: 380px; height: 380px; border-radius: 50%; left: -130px; top: -185px; background: var(--to); }
+.ring { width: 300px; height: 300px; border-radius: 50%; left: 150px; top: -110px; border: 3px solid var(--from); }
+.tri { width: 0; height: 0; right: -14px; top: 560px; border-left: 46px solid transparent; border-right: 46px solid transparent;
+  border-bottom: 92px solid var(--ink); transform: rotate(-24deg); }
+.blob { width: 230px; height: 230px; left: -96px; top: 860px; }
+.dots { right: 18px; bottom: 210px; width: 48px; height: 48px;
+  background-image: radial-gradient(circle, var(--ink) 4px, transparent 4.6px); background-size: 18px 18px; background-position: -1px -1px; }
+.tape-a, .tape-b { width: 190px; height: 46px; background: var(--tape); box-shadow: 0 1px 2px rgba(23,20,15,.12); }
+.tape-a { right: -40px; top: 26px; transform: rotate(32deg); }
+.tape-b { left: -38px; bottom: 30px; transform: rotate(28deg); }
+
 .header, .main, .footer { position: relative; z-index: 1; }
 .header { display: flex; align-items: center; justify-content: space-between; height: 96px; }
-.brand { display: flex; align-items: center; gap: 16px; font-size: 34px; font-weight: 800; }
+.brand { display: flex; align-items: center; gap: 16px; font-size: 36px; font-weight: 900; color: var(--ink); letter-spacing: -.3px; }
 .brand img { height: 72px; }
-.chip { background: var(--accent); color: #0b1020; font-weight: 800; font-size: 28px; padding: 8px 26px; border-radius: 999px; }
-.main { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 36px; padding: 24px 0; }
-.rule { width: 120px; height: 8px; background: var(--accent); border-radius: 4px; flex: none; }
-.footer { display: flex; justify-content: space-between; align-items: center; font-size: 28px; opacity: .9; height: 72px; border-top: 2px solid rgba(255,255,255,.25); padding-top: 18px; }
+.chip { background: var(--ink); color: var(--paper-light); font-weight: 800; font-size: 28px; padding: 6px 26px 8px;
+  transform: rotate(-2deg); box-shadow: 4px 4px 0 var(--to); }
+.main { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; padding: 10px 0; }
+.rule { width: 150px; height: 14px; background: var(--to); box-shadow: 5px 5px 0 var(--ink); flex: none; }
+
+/* headline with a block of colour behind its starting corner */
+.hl { position: relative; isolation: isolate; flex: none; }
+.hl::before { content: ""; position: absolute; z-index: -1; width: 86px; height: 86px; top: -14px; right: -42px; background: var(--to); transform: rotate(4deg); }
+
+/* pasted newspaper clipping; negative side margins keep the text width unchanged */
+.clip { position: relative; flex: none; margin: 0 -32px; padding: 20px 30px; background: var(--paper-light);
+  border: 2px solid var(--ink); box-shadow: 9px 9px 0 var(--from); transform: rotate(-.6deg); }
+.clip::before, .taped::before { content: ""; position: absolute; z-index: 2; top: -22px; left: 50%; width: 170px; height: 40px; margin-left: -85px;
+  background: var(--tape); transform: rotate(-3deg); box-shadow: 0 1px 2px rgba(23,20,15,.12); }
+.taped { position: relative; flex: none; }
+
+.footer { display: flex; justify-content: space-between; align-items: center; font-size: 28px; font-weight: 800; color: var(--ink);
+  height: 72px; border-top: 3px solid var(--ink); padding-top: 18px; }
+.barcode { position: absolute; left: 0; bottom: -44px; width: 210px; height: 30px;
+  background: repeating-linear-gradient(90deg, var(--ink) 0 3px, transparent 3px 6px, var(--ink) 6px 7px, transparent 7px 11px, var(--ink) 11px 15px, transparent 15px 17px); }
 {% block css %}{% endblock %}
 </style>
 </head>
 <body>
 <div class="slide">
+  <div class="deco" aria-hidden="true">
+    <div class="sun"></div>
+    <div class="ring"></div>
+    <div class="tri"></div>
+    <svg class="blob" viewBox="0 0 230 230"><g style="fill: var(--from)">
+      <circle cx="118" cy="112" r="62"/><circle cx="72" cy="80" r="34"/><circle cx="164" cy="74" r="26"/><circle cx="172" cy="150" r="30"/>
+      <circle cx="96" cy="170" r="28"/><circle cx="40" cy="132" r="14"/><circle cx="200" cy="108" r="9"/><circle cx="58" cy="196" r="8"/>
+      <circle cx="146" cy="206" r="11"/><circle cx="116" cy="34" r="10"/><circle cx="22" cy="92" r="6"/><circle cx="208" cy="190" r="5"/></g></svg>
+    <div class="dots"></div>
+    <div class="tape-a"></div>
+    <div class="tape-b"></div>
+  </div>
   <div class="header">
     <div class="brand">{% if logo %}<img src="{{ logo }}" alt="">{% endif %}<span>{{ wordmark }}</span></div>
     <div class="chip">{{ style.label }}</div>
   </div>
   <div class="main">{% block main %}{% endblock %}</div>
-  <div class="footer">{% block footer %}<span>{{ handle|bdi }}</span>{% endblock %}</div>
+  <div class="footer">{% block footer %}<span>{{ handle|bdi }}</span>{% endblock %}<i class="barcode"></i></div>
 </div>
 <script>
 window.fitAll = function () {
