@@ -21,7 +21,7 @@
       "gemini-3.6-flash": 1
     },
     "2026-11-21": {
-      "gemini-3.6-flash": 3
+      "gemini-3.6-flash": 6
     }
   },
   "pending": {},
@@ -131,10 +131,32 @@
       "summary": "أدمجت Google تقنية Google Duplex في تطبيق Tasks in Gemini لمساعدة المستخدمين في تنسيق المهام اليومية. وتستطيع الميزة إجراء مكالمات هاتفية مع الشركات والمتاجر لحجز المواعيد والتحقق من الخدمات. وتعتمد التقنية على نماذج Gemini الحديثة لإدارة الحوارات الصوتية الطبيعية والاستجابة السريعة.",
       "timestamp": "2026-11-21T11:49:05Z",
       "title": "How Google Duplex evolved to also call businesses for you in Gemini"
+    },
+    {
+      "category": "companies",
+      "date": "2026-11-21",
+      "hashtags": [
+        "أخبار_الشركات",
+        "الذكاء_الاصطناعي",
+        "تقنية_المعلومات",
+        "حوسبة_سحابية"
+      ],
+      "headline": "شركة AWS تطلق تحديثات جديدة لمنصة AWS Quick لتسهيل إدارة العمليات والمهام",
+      "ig_media_id": "18428333329153391",
+      "permalink": "https://www.instagram.com/p/DgAwA_CE7D7/",
+      "slot": "s1800",
+      "source_name": "AWS",
+      "source_urls": [
+        "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together"
+      ],
+      "summary": "أعلنت AWS عن إدخال تحديثات على بيئة العمل الذكية AWS Quick تهدف إلى تحسين إنتاجية الفرق. تتضمن التحديثات إمكانية بناء وتطوير مسارات العمل عبر المحادثة، إضافة إلى تنسيق المهام بين وكلاء متعددين للرد على الاستفسارات المركبة. كما شملت التحديثات واجهة ويب مطورة، ودعم الربط مع أدوات مثل Meta ads و Amplitude، وتوفير لغات جديدة ووسائل تحكم أمنية.",
+      "timestamp": "2026-11-21T17:19:03Z",
+      "title": "New in AWS Quick: More capable flows, an updated web experience, and agents that work together"
     }
   ],
   "seen_urls": {
     "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks": "2026-11-21T07:48:30Z",
+    "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together": "2026-11-21T17:19:03Z",
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
     "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z",
