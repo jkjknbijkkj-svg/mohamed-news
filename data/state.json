@@ -21,7 +21,7 @@
       "gemini-3.6-flash": 1
     },
     "2026-11-21": {
-      "gemini-3.6-flash": 8
+      "gemini-3.6-flash": 10
     }
   },
   "pending": {},
@@ -175,10 +175,32 @@
       "summary": "تسجل أداة rust-anything سلوك التطبيقات المكتوبة بلغات مثل Python وNode.js وGo ثم تقارنها بالنسخة المعاد كتابتها بلغة Rust. وتتحقق الأداة من مطابقة المخرجات في كل مرحلة قبل الانتقال إلى الجزء التالي حتى يصبح التطبيق كاملاً بلغة Rust.",
       "timestamp": "2026-11-21T20:15:03Z",
       "title": "erkamyaman/rust-anything"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-22",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "التسويق_الرقمي",
+        "حملات_إعلانية",
+        "تقنية_المعلومات"
+      ],
+      "headline": "AWS Quick تضيف موصل ذكاء اصطناعي لإدارة وتحليل إعلانات Meta",
+      "ig_media_id": "17958132357298398",
+      "permalink": "https://www.instagram.com/p/DgCThmGDXbq/",
+      "slot": "s0800",
+      "source_name": "AWS",
+      "source_urls": [
+        "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick"
+      ],
+      "summary": "أعلنت AWS عن إضافة موصل ذكاء اصطناعي لخدمات Meta ads داخل منصة Quick. يتيح هذا الاتصال للمستخدمين إنشاء الحملات الإعلانية وتعديلها وتحليل أدائها باستخدام الأوامر النصية. كما يدمج النظام البيانات المختلفة لإعداد لوحات متابعة وعروض تقديمية تلقائياً بعد أخذ موافقة المستخدم.",
+      "timestamp": "2026-11-22T07:48:32Z",
+      "title": "Meta ads is now available in AWS Quick"
     }
   ],
   "seen_urls": {
     "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks": "2026-11-21T07:48:30Z",
+    "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick": "2026-11-22T07:48:32Z",
     "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together": "2026-11-21T17:19:03Z",
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
