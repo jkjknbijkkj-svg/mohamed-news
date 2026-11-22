@@ -29,12 +29,13 @@
       "gemini-3.6-flash": 10
     },
     "2026-11-22": {
-      "gemini-3.6-flash": 1
+      "gemini-3.6-flash": 2
     }
   },
   "pending": {},
   "posted_repos": {
-    "erkamyaman/rust-anything": "2026-11-21T20:15:03Z"
+    "erkamyaman/rust-anything": "2026-11-21T20:15:03Z",
+    "wangzan101/mika": "2026-11-22T20:18:23Z"
   },
   "published": [
     {
@@ -225,6 +226,28 @@
       "summary": "قدمت AWS مهارة التخزين المؤقت الموزع لخوادم النماذج اللغوية LLM المستضافة ذاتياً ضمن Agent Toolkit for AWS. تساعد هذه التقنية على تقليل تكاليف الاستدلال بنسبة تصل إلى 40% وتخفيض زمن الاستجابة الأولية بنسبة تصل إلى 80%. تعتمد المهارة على Amazon ElastiCache لمشاركة حالة التخزين المؤقت بين الخوادم وتقييم الفوائد عبر أداة KVTrace.",
       "timestamp": "2026-11-22T11:46:00Z",
       "title": "Cut self-hosted LLM cost and latency with the distributed KV caching agent skill"
+    },
+    {
+      "category": "github",
+      "date": "2026-11-22",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "أندرويد",
+        "تطبيقات",
+        "مصدر_مفتوح"
+      ],
+      "headline": "مساعد ذكاء اصطناعي مفتوح المصدر لنظام Android ينفذ المهام في الخلفية",
+      "ig_media_id": "18104001188395357",
+      "permalink": "https://www.instagram.com/p/DgDpVGwFJS0/",
+      "repo": "wangzan101/Mika",
+      "slot": "s2100",
+      "source_name": "GitHub",
+      "source_urls": [
+        "https://github.com/wangzan101/Mika"
+      ],
+      "summary": "يعمل مشروع Mika كمساعد ذكاء اصطناعي على أجهزة Android لإدارة التطبيقات وتصفح المواقع على شاشة خلفية مستقلة. يتيح للمستخدمين تنفيذ الأوامر النصية والصوتية دون تعطيل استخدامهم اليومي للهاتف. كما يحتفظ بالبيانات محلياً على الجهاز ويستند إلى ترخيص Apache-2.0.",
+      "timestamp": "2026-11-22T20:18:23Z",
+      "title": "wangzan101/Mika"
     }
   ],
   "seen_urls": {
@@ -235,6 +258,7 @@
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
     "https://github.com/erkamyaman/rust-anything": "2026-11-21T20:15:03Z",
+    "https://github.com/wangzan101/Mika": "2026-11-22T20:18:23Z",
     "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z",
     "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini": "2026-11-21T11:49:05Z"
   },
