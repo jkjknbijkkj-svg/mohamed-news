@@ -27,6 +27,9 @@
     },
     "2026-11-21": {
       "gemini-3.6-flash": 10
+    },
+    "2026-11-22": {
+      "gemini-3.6-flash": 1
     }
   },
   "pending": {},
@@ -201,10 +204,32 @@
       "summary": "أعلنت AWS عن إضافة موصل ذكاء اصطناعي لخدمات Meta ads داخل منصة Quick. يتيح هذا الاتصال للمستخدمين إنشاء الحملات الإعلانية وتعديلها وتحليل أدائها باستخدام الأوامر النصية. كما يدمج النظام البيانات المختلفة لإعداد لوحات متابعة وعروض تقديمية تلقائياً بعد أخذ موافقة المستخدم.",
       "timestamp": "2026-11-22T07:48:32Z",
       "title": "Meta ads is now available in AWS Quick"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-22",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "حوسبة_سحابية",
+        "تقنية_المعلومات",
+        "النماذج_اللغوية"
+      ],
+      "headline": "مهارة جديدة من AWS لتقليل تكلفة وزمن استجابة النماذج اللغوية الكبيرة",
+      "ig_media_id": "17970936815984251",
+      "permalink": "https://www.instagram.com/p/DgCus0gDNSX/",
+      "slot": "s1230",
+      "source_name": "AWS",
+      "source_urls": [
+        "https://aws.amazon.com/blogs/machine-learning/cut-self-hosted-llm-cost-and-latency-with-the-distributed-kv-caching-agent-skill"
+      ],
+      "summary": "قدمت AWS مهارة التخزين المؤقت الموزع لخوادم النماذج اللغوية LLM المستضافة ذاتياً ضمن Agent Toolkit for AWS. تساعد هذه التقنية على تقليل تكاليف الاستدلال بنسبة تصل إلى 40% وتخفيض زمن الاستجابة الأولية بنسبة تصل إلى 80%. تعتمد المهارة على Amazon ElastiCache لمشاركة حالة التخزين المؤقت بين الخوادم وتقييم الفوائد عبر أداة KVTrace.",
+      "timestamp": "2026-11-22T11:46:00Z",
+      "title": "Cut self-hosted LLM cost and latency with the distributed KV caching agent skill"
     }
   ],
   "seen_urls": {
     "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks": "2026-11-21T07:48:30Z",
+    "https://aws.amazon.com/blogs/machine-learning/cut-self-hosted-llm-cost-and-latency-with-the-distributed-kv-caching-agent-skill": "2026-11-22T11:46:00Z",
     "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick": "2026-11-22T07:48:32Z",
     "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together": "2026-11-21T17:19:03Z",
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
