@@ -30,6 +30,9 @@
     },
     "2026-11-22": {
       "gemini-3.6-flash": 2
+    },
+    "2026-11-23": {
+      "gemini-3.6-flash": 2
     }
   },
   "pending": {},
@@ -248,6 +251,27 @@
       "summary": "يعمل مشروع Mika كمساعد ذكاء اصطناعي على أجهزة Android لإدارة التطبيقات وتصفح المواقع على شاشة خلفية مستقلة. يتيح للمستخدمين تنفيذ الأوامر النصية والصوتية دون تعطيل استخدامهم اليومي للهاتف. كما يحتفظ بالبيانات محلياً على الجهاز ويستند إلى ترخيص Apache-2.0.",
       "timestamp": "2026-11-22T20:18:23Z",
       "title": "wangzan101/Mika"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-23",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "تكنولوجيا",
+        "أبحاث_الذكاء_الاصطناعي",
+        "معايير_الأمان"
+      ],
+      "headline": "شركة OpenAI تقترح استخدام معيار الحيرة لتتبع تطوير الذكاء الاصطناعي وضبط الأمان",
+      "ig_media_id": "18093370163253869",
+      "permalink": "https://www.instagram.com/p/DgE6pYqkiy9/",
+      "slot": "s0800",
+      "source_name": "OpenAI",
+      "source_urls": [
+        "https://openai.com/index/perplexity-and-intelligence"
+      ],
+      "summary": "نشرت شركة OpenAI قياساتها الداخلية لنسبة الحيرة في النماذج للمساهمة في بناء أساس علمي مشترك لمراقبة التطور. وأوضحت الشركة أن تحسين قدرة النماذج على التنبؤ بالنصوص يكشف عن ظهور مهارات جديدة في مجالات مثل الأمن السيبراني والرياضيات. كما اقترحت وضع حدود صنعتية مشتركة تعتمد على هذا المقياس لضمان السلامة قبل تجاوز مستويات محددة.",
+      "timestamp": "2026-11-23T08:08:56Z",
+      "title": "Perplexity and Intelligence"
     }
   ],
   "seen_urls": {
@@ -259,6 +283,7 @@
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
     "https://github.com/erkamyaman/rust-anything": "2026-11-21T20:15:03Z",
     "https://github.com/wangzan101/Mika": "2026-11-22T20:18:23Z",
+    "https://openai.com/index/perplexity-and-intelligence": "2026-11-23T08:08:56Z",
     "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z",
     "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini": "2026-11-21T11:49:05Z"
   },
