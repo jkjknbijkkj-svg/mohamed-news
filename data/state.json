@@ -32,11 +32,12 @@
       "gemini-3.6-flash": 2
     },
     "2026-11-23": {
-      "gemini-3.6-flash": 4
+      "gemini-3.6-flash": 5
     }
   },
   "pending": {},
   "posted_repos": {
+    "ccch1mneyyy/dsh-go": "2026-11-23T20:27:40Z",
     "erkamyaman/rust-anything": "2026-11-21T20:15:03Z",
     "wangzan101/mika": "2026-11-22T20:18:23Z"
   },
@@ -293,6 +294,28 @@
       "summary": "أعلنت شركة Google عن إمكانية ربط تطبيقات مثل Google Wallet وDrive وGemini بميزة Personal Intelligence في خيار AI Mode. وتتيح هذه الخطوة تقديم إجابات مخصصة تعتمد على سياق النفقات والمستندات والمحادثات إلى جانب Gmail وCalendar وPhotos. كما يمكن للمستخدمين التحكم بجميع إعدادات التخصيص وتشغيل الربط أو إيقافه في أي وقت.",
       "timestamp": "2026-11-23T17:30:43Z",
       "title": "A more tailored Google Search that’s uniquely yours"
+    },
+    {
+      "category": "github",
+      "date": "2026-11-23",
+      "hashtags": [
+        "تطبيقات_الاندرويد",
+        "برمجة",
+        "أدوات_المطورين",
+        "مشاريع_مفتوحة_المصدر"
+      ],
+      "headline": "تطبيق للهواتف الذكية يتيح تشغيل DeepSeek Harness والتحكم بالحواسيب عن بُعد",
+      "ig_media_id": "18028156526933097",
+      "permalink": "https://www.instagram.com/p/DgGPL2aEiAc/",
+      "repo": "ccch1mneyyy/dsh-Go",
+      "slot": "s2100",
+      "source_name": "GitHub",
+      "source_urls": [
+        "https://github.com/ccch1mneyyy/dsh-Go"
+      ],
+      "summary": "يوفر تطبيق DSH Go واجهة تشغيل لبيئة DeepSeek Harness على نظام Android دون الحاجة لصلاحيات Root. يتضمن التطبيق بيئة Linux داخلية تسمح بالتشغيل المحلي، بالإضافة إلى خيارات للاتصال والتحكم عن بُعد في الحواسيب عبر SSH.",
+      "timestamp": "2026-11-23T20:27:40Z",
+      "title": "ccch1mneyyy/dsh-Go"
     }
   ],
   "seen_urls": {
@@ -303,6 +326,7 @@
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
     "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps": "2026-11-23T17:30:43Z",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
+    "https://github.com/ccch1mneyyy/dsh-Go": "2026-11-23T20:27:40Z",
     "https://github.com/erkamyaman/rust-anything": "2026-11-21T20:15:03Z",
     "https://github.com/wangzan101/Mika": "2026-11-22T20:18:23Z",
     "https://openai.com/index/perplexity-and-intelligence": "2026-11-23T08:08:56Z",
