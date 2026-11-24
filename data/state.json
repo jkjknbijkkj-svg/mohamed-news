@@ -1,5 +1,5 @@
 {
-  "consecutive_failures": 1,
+  "consecutive_failures": 0,
   "insights": [
     {
       "date": "2026-11-15",
@@ -13,9 +13,6 @@
     }
   ],
   "llm_usage": {
-    "2026-11-12": {
-      "gemini-3.6-flash": 2
-    },
     "2026-11-13": {
       "gemini-3.6-flash": 5
     },
@@ -33,6 +30,9 @@
     },
     "2026-11-23": {
       "gemini-3.6-flash": 6
+    },
+    "2026-11-24": {
+      "gemini-3.6-flash": 1
     }
   },
   "pending": {},
@@ -343,6 +343,27 @@
       "summary": "من المقرر أن يمثل Jensen Huang أمام لجنة المصارف بمجلس الشيوخ في December 3، وذلك بعد ساعات من إعادته لمنصبه في Nvidia. وتأتي الجلسة بناءً على مطالبات للتحقيق في علاقاته واحتمالية تورطه في عمليات تهريب الرقائق. وتتولى اللجنة الإشراف على سياسات تصدير التقنيات الحساسة الخاصة بالذكاء الاصطناعي. كما وافق Huang سابقًا على الحضور أمام لجان إضافية في December 1.",
       "timestamp": "2026-11-24T08:00:48Z",
       "title": "Jensen Huang scheduled to testify next week in Senate following reinstatement as Nvidia CEO"
+    },
+    {
+      "category": "companies",
+      "date": "2026-11-24",
+      "hashtags": [
+        "أخبار_الشركات",
+        "الذكاء_الاصطناعي",
+        "التجارة_الأمريكية"
+      ],
+      "headline": "واشنطن تدرج شركة Megaspeed في قائمة الحظر التجاري مع عودة رئيس Nvidia",
+      "ig_media_id": "18193243300414520",
+      "permalink": "https://www.instagram.com/p/DgIfcWkCRkR/",
+      "slot": "s1800",
+      "source_name": "The Verge",
+      "source_urls": [
+        "https://engadget.com/2326638/commerce-department-adds-megaspeed-to-trade-blacklist",
+        "https://theverge.com/policy/1041270/nvidia-megaspeed-commerce-dept-entity-list"
+      ],
+      "summary": "أضافت وزارة التجارة الأمريكية شركة Megaspeed وفروعها في ماليزيا وتايلاند إلى قائمة الحظر التجاري. وتأتي الخطوة بسبب مخاوف تتعلق بتأمين شرائح الذكاء الاصطناعي ومخاطر إعادة توجيهها. يزامن القرار عودة Jensen Huang ليدير شركة Nvidia بدعم حكومي.",
+      "timestamp": "2026-11-24T17:28:10Z",
+      "title": "US Commerce Department adds Megaspeed to trade blacklist as Huang retakes control of Nvidia"
     }
   ],
   "seen_urls": {
@@ -355,6 +376,7 @@
     "https://cnbc.com/2026/11/23/anthropic-nvidia-shares.html": "2026-11-24T08:00:48Z",
     "https://cnbc.com/2026/11/23/jim-cramer-nvidia-jensen-huang-ceo-return.html": "2026-11-24T08:00:48Z",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
+    "https://engadget.com/2326638/commerce-department-adds-megaspeed-to-trade-blacklist": "2026-11-24T17:28:10Z",
     "https://github.com/ccch1mneyyy/dsh-Go": "2026-11-23T20:27:40Z",
     "https://github.com/erkamyaman/rust-anything": "2026-11-21T20:15:03Z",
     "https://github.com/wangzan101/Mika": "2026-11-22T20:18:23Z",
@@ -363,6 +385,7 @@
     "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini": "2026-11-21T11:49:05Z",
     "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo": "2026-11-24T08:00:48Z",
     "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo": "2026-11-24T08:00:48Z",
+    "https://theverge.com/policy/1041270/nvidia-megaspeed-commerce-dept-entity-list": "2026-11-24T17:28:10Z",
     "https://wired.com/story/jensen-huang-is-back-as-nvidia-ceo": "2026-11-24T08:00:48Z"
   },
   "token": {
