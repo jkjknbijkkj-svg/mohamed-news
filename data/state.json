@@ -32,13 +32,14 @@
       "gemini-3.6-flash": 6
     },
     "2026-11-24": {
-      "gemini-3.6-flash": 1
+      "gemini-3.6-flash": 2
     }
   },
   "pending": {},
   "posted_repos": {
     "ccch1mneyyy/dsh-go": "2026-11-23T20:27:40Z",
     "erkamyaman/rust-anything": "2026-11-21T20:15:03Z",
+    "mdiri-ai/soduwork": "2026-11-24T20:24:15Z",
     "wangzan101/mika": "2026-11-22T20:18:23Z"
   },
   "published": [
@@ -364,6 +365,27 @@
       "summary": "أضافت وزارة التجارة الأمريكية شركة Megaspeed وفروعها في ماليزيا وتايلاند إلى قائمة الحظر التجاري. وتأتي الخطوة بسبب مخاوف تتعلق بتأمين شرائح الذكاء الاصطناعي ومخاطر إعادة توجيهها. يزامن القرار عودة Jensen Huang ليدير شركة Nvidia بدعم حكومي.",
       "timestamp": "2026-11-24T17:28:10Z",
       "title": "US Commerce Department adds Megaspeed to trade blacklist as Huang retakes control of Nvidia"
+    },
+    {
+      "category": "github",
+      "date": "2026-11-24",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "برمجة",
+        "مفتوح_المصدر"
+      ],
+      "headline": "محرك برمجي موجه للفرق والوكلاء الأذكياء يعتمد على الاستضافة الذاتية",
+      "ig_media_id": "18124740260472380",
+      "permalink": "https://www.instagram.com/p/DgIzmktl0v4/",
+      "repo": "mdiri-ai/SoduWork",
+      "slot": "s2100",
+      "source_name": "GitHub",
+      "source_urls": [
+        "https://github.com/mdiri-ai/SoduWork"
+      ],
+      "summary": "يوفر SoduWork بيئة عمل ذاتية الاستضافة تتيح للفرق إدارة الوكلاء الأذكياء وتوزيع المهام بينهم. كما يدعم التعامل مع أدوات متعددة مثل Pi وOpenCode لتنفيذ المهام ومراجعة النتائج.",
+      "timestamp": "2026-11-24T20:24:15Z",
+      "title": "mdiri-ai/SoduWork"
     }
   ],
   "seen_urls": {
@@ -379,6 +401,7 @@
     "https://engadget.com/2326638/commerce-department-adds-megaspeed-to-trade-blacklist": "2026-11-24T17:28:10Z",
     "https://github.com/ccch1mneyyy/dsh-Go": "2026-11-23T20:27:40Z",
     "https://github.com/erkamyaman/rust-anything": "2026-11-21T20:15:03Z",
+    "https://github.com/mdiri-ai/SoduWork": "2026-11-24T20:24:15Z",
     "https://github.com/wangzan101/Mika": "2026-11-22T20:18:23Z",
     "https://openai.com/index/perplexity-and-intelligence": "2026-11-23T08:08:56Z",
     "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z",
