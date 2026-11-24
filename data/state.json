@@ -32,7 +32,7 @@
       "gemini-3.6-flash": 2
     },
     "2026-11-23": {
-      "gemini-3.6-flash": 5
+      "gemini-3.6-flash": 6
     }
   },
   "pending": {},
@@ -316,6 +316,33 @@
       "summary": "يوفر تطبيق DSH Go واجهة تشغيل لبيئة DeepSeek Harness على نظام Android دون الحاجة لصلاحيات Root. يتضمن التطبيق بيئة Linux داخلية تسمح بالتشغيل المحلي، بالإضافة إلى خيارات للاتصال والتحكم عن بُعد في الحواسيب عبر SSH.",
       "timestamp": "2026-11-23T20:27:40Z",
       "title": "ccch1mneyyy/dsh-Go"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-24",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "مجلس_الشيوخ",
+        "رقائق_الذكاء_الاصطناعي",
+        "تكنولوجيا"
+      ],
+      "headline": "Jensen Huang يمثل أمام مجلس الشيوخ بعد إعادته إلى رئاسة Nvidia",
+      "ig_media_id": "18211205272323694",
+      "permalink": "https://www.instagram.com/p/DgHehdWlzpX/",
+      "slot": "s0800",
+      "source_name": "TechCrunch",
+      "source_urls": [
+        "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo",
+        "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo",
+        "https://wired.com/story/jensen-huang-is-back-as-nvidia-ceo",
+        "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo",
+        "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo",
+        "https://cnbc.com/2026/11/23/anthropic-nvidia-shares.html",
+        "https://cnbc.com/2026/11/23/jim-cramer-nvidia-jensen-huang-ceo-return.html"
+      ],
+      "summary": "من المقرر أن يمثل Jensen Huang أمام لجنة المصارف بمجلس الشيوخ في December 3، وذلك بعد ساعات من إعادته لمنصبه في Nvidia. وتأتي الجلسة بناءً على مطالبات للتحقيق في علاقاته واحتمالية تورطه في عمليات تهريب الرقائق. وتتولى اللجنة الإشراف على سياسات تصدير التقنيات الحساسة الخاصة بالذكاء الاصطناعي. كما وافق Huang سابقًا على الحضور أمام لجان إضافية في December 1.",
+      "timestamp": "2026-11-24T08:00:48Z",
+      "title": "Jensen Huang scheduled to testify next week in Senate following reinstatement as Nvidia CEO"
     }
   ],
   "seen_urls": {
@@ -325,13 +352,18 @@
     "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together": "2026-11-21T17:19:03Z",
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
     "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps": "2026-11-23T17:30:43Z",
+    "https://cnbc.com/2026/11/23/anthropic-nvidia-shares.html": "2026-11-24T08:00:48Z",
+    "https://cnbc.com/2026/11/23/jim-cramer-nvidia-jensen-huang-ceo-return.html": "2026-11-24T08:00:48Z",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
     "https://github.com/ccch1mneyyy/dsh-Go": "2026-11-23T20:27:40Z",
     "https://github.com/erkamyaman/rust-anything": "2026-11-21T20:15:03Z",
     "https://github.com/wangzan101/Mika": "2026-11-22T20:18:23Z",
     "https://openai.com/index/perplexity-and-intelligence": "2026-11-23T08:08:56Z",
     "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z",
-    "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini": "2026-11-21T11:49:05Z"
+    "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini": "2026-11-21T11:49:05Z",
+    "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo": "2026-11-24T08:00:48Z",
+    "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo": "2026-11-24T08:00:48Z",
+    "https://wired.com/story/jensen-huang-is-back-as-nvidia-ceo": "2026-11-24T08:00:48Z"
   },
   "token": {
     "issued_at": "2026-11-15T09:38:32Z",
