@@ -1,5 +1,5 @@
 {
-  "consecutive_failures": 0,
+  "consecutive_failures": 1,
   "insights": [
     {
       "date": "2026-11-15",
@@ -32,7 +32,7 @@
       "gemini-3.6-flash": 2
     },
     "2026-11-25": {
-      "gemini-3.6-flash": 4
+      "gemini-3.6-flash": 5
     }
   },
   "pending": {},
