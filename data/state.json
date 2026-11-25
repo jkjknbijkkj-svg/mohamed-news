@@ -32,7 +32,7 @@
       "gemini-3.6-flash": 2
     },
     "2026-11-25": {
-      "gemini-3.6-flash": 1
+      "gemini-3.6-flash": 4
     }
   },
   "pending": {},
@@ -407,6 +407,26 @@
       "summary": "أعلنت AWS عن التوفر العام لواجهة Trusted Access API على منصة Amazon Bedrock. وتتضمن الميزة معاينة برنامجين جديدين هما EFS و EDC لنماذج Claude بالتعاون مع Anthropic. تتيح هذه الحلول للشركات التحكم بآلية مراجعة الأمان وتحديد أماكن تخزين البيانات الخاصة بها. تهدف الميزات الجديدة لإتاحة استخدام أكثر أمانا لنماذج مثل Claude Fable و Claude Mythos.",
       "timestamp": "2026-11-25T08:00:59Z",
       "title": "Introducing the Amazon Bedrock Trusted Access API, with Enterprise Frontier Safeguards and Enterprise Data Controls for Claude models"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-25",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "الوكلاء_الصوتيون",
+        "معالجة_اللغات"
+      ],
+      "headline": "إطلاق وكيل صوتي باستخدام CUGA للربط بين اللغات المحلية والمستندات الإنجليزية",
+      "ig_media_id": "18105935909041170",
+      "permalink": "https://www.instagram.com/p/DgKfhp4DRQk/",
+      "slot": "s1230",
+      "source_name": "Hugging Face",
+      "source_urls": [
+        "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga"
+      ],
+      "summary": "طور باحثون وكيلاً صوتياً يعتمد على إطار العمل مفتوح المصدر CUGA من IBM Research للإجابة عن الأسئلة بلغات محلية متعددة. يقوم الوكيل بتحويل الكلام إلى نصوص والبحث في كتيبات باللغة الإنجليزية باستخدام نماذج تضمين متعددة اللغات لإعادة الإجابات صوتياً. يتيح الإطار التنقل بين نماذج مثل watsonx و OpenAI مع إمكانية ربطه مع IBM Bharat Core.",
+      "timestamp": "2026-11-25T12:07:22Z",
+      "title": "An Indic Voice Agent with CUGA"
     }
   ],
   "seen_urls": {
@@ -425,6 +445,7 @@
     "https://github.com/erkamyaman/rust-anything": "2026-11-21T20:15:03Z",
     "https://github.com/mdiri-ai/SoduWork": "2026-11-24T20:24:15Z",
     "https://github.com/wangzan101/Mika": "2026-11-22T20:18:23Z",
+    "https://huggingface.co/blog/ibm-research/an-indic-voice-agent-with-cuga": "2026-11-25T12:07:22Z",
     "https://openai.com/index/perplexity-and-intelligence": "2026-11-23T08:08:56Z",
     "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z",
     "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini": "2026-11-21T11:49:05Z",
