@@ -13,9 +13,6 @@
     }
   ],
   "llm_usage": {
-    "2026-11-13": {
-      "gemini-3.6-flash": 5
-    },
     "2026-11-14": {
       "gemini-3.6-flash": 1
     },
@@ -33,6 +30,9 @@
     },
     "2026-11-24": {
       "gemini-3.6-flash": 2
+    },
+    "2026-11-25": {
+      "gemini-3.6-flash": 1
     }
   },
   "pending": {},
@@ -386,11 +386,33 @@
       "summary": "يوفر SoduWork بيئة عمل ذاتية الاستضافة تتيح للفرق إدارة الوكلاء الأذكياء وتوزيع المهام بينهم. كما يدعم التعامل مع أدوات متعددة مثل Pi وOpenCode لتنفيذ المهام ومراجعة النتائج.",
       "timestamp": "2026-11-24T20:24:15Z",
       "title": "mdiri-ai/SoduWork"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-25",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "تكنولوجيا",
+        "حماية_البيانات",
+        "أمازون"
+      ],
+      "headline": "إطلاق واجهة Trusted Access API على Amazon Bedrock لتحكم أفضل بنماذج Claude",
+      "ig_media_id": "18041410130846026",
+      "permalink": "https://www.instagram.com/p/DgKDVV5DqPt/",
+      "slot": "s0800",
+      "source_name": "AWS",
+      "source_urls": [
+        "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls"
+      ],
+      "summary": "أعلنت AWS عن التوفر العام لواجهة Trusted Access API على منصة Amazon Bedrock. وتتضمن الميزة معاينة برنامجين جديدين هما EFS و EDC لنماذج Claude بالتعاون مع Anthropic. تتيح هذه الحلول للشركات التحكم بآلية مراجعة الأمان وتحديد أماكن تخزين البيانات الخاصة بها. تهدف الميزات الجديدة لإتاحة استخدام أكثر أمانا لنماذج مثل Claude Fable و Claude Mythos.",
+      "timestamp": "2026-11-25T08:00:59Z",
+      "title": "Introducing the Amazon Bedrock Trusted Access API, with Enterprise Frontier Safeguards and Enterprise Data Controls for Claude models"
     }
   ],
   "seen_urls": {
     "https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-agentcore-harness-adds-strands-harness-defaults-built-in-tools-and-lifecycle-hooks": "2026-11-21T07:48:30Z",
     "https://aws.amazon.com/blogs/machine-learning/cut-self-hosted-llm-cost-and-latency-with-the-distributed-kv-caching-agent-skill": "2026-11-22T11:46:00Z",
+    "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls": "2026-11-25T08:00:59Z",
     "https://aws.amazon.com/blogs/machine-learning/meta-ads-is-now-available-in-aws-quick": "2026-11-22T07:48:32Z",
     "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together": "2026-11-21T17:19:03Z",
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
