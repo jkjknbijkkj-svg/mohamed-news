@@ -32,7 +32,7 @@
       "gemini-3.6-flash": 7
     },
     "2026-11-26": {
-      "gemini-3.6-flash": 1
+      "gemini-3.6-flash": 2
     }
   },
   "pending": {},
@@ -493,6 +493,27 @@
       "summary": "وجهت Nvidia شركاءها مثل Dell وSupermicro بإيقاف إرسال الخوادم إلى ماليزيا وسنغافورة وثايلاند وإندونيسيا. تهدف الضوابط الأمريكية الجديدة إلى منع الشركات الصينية من استخدام المزودين السحابيين الأجانب للوصول إلى رقائق B300 المتطورة. تسببت هذه القرارات في تعليق قروض بنكية بقيمة 500 مليون دولار لشركة Aolani الموردة لشركة ByteDance.",
       "timestamp": "2026-11-26T12:06:39Z",
       "title": "Nvidia halts server shipments to Malaysia, Singapore, Thailand, and Indonesia after tighter US export controls"
+    },
+    {
+      "category": "companies",
+      "date": "2026-11-26",
+      "hashtags": [
+        "ألعاب_سحابية",
+        "تقنية_الألعاب",
+        "أخبار_الشركات",
+        "تكنولوجيا"
+      ],
+      "headline": "NVIDIA تقدم عروضاً جديدة وتحديثات لخدمة الألعاب السحابية GeForce NOW",
+      "ig_media_id": "18157349923534327",
+      "permalink": "https://www.instagram.com/p/DgNpfU8GgLM/",
+      "slot": "s1800",
+      "source_name": "NVIDIA",
+      "source_urls": [
+        "https://blogs.nvidia.com/blog/geforce-now-thursday-community-war-thunder-reward"
+      ],
+      "summary": "أعلنت شركة NVIDIA عن تقديم خصومات بنسبة 30% على اشتراكات GeForce NOW الستة أشهر لفئتي Performance وUltimate. كما وفرت الشركة عرضاً خاصاً لمستخدمي جهاز Amazon Fire TV Stick، إلى جانب إضافة 12 لعبة جديدة إلى المكتبة. وتحصل لعبة War Thunder على دعم تقنية DLSS 5 مع مكافآت مجانية لجميع الفئات.",
+      "timestamp": "2026-11-26T17:32:10Z",
+      "title": "Come for the Games, Stay for the Community With GeForce NOW"
     }
   ],
   "seen_urls": {
@@ -503,6 +524,7 @@
     "https://aws.amazon.com/blogs/machine-learning/new-in-aws-quick-more-capable-flows-an-updated-web-experience-and-agents-that-work-together": "2026-11-21T17:19:03Z",
     "https://blog.google/products-and-platforms/products/search/gemini-4-hydrogen-search-upgrade": "2026-11-13T17:24:36Z",
     "https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps": "2026-11-23T17:30:43Z",
+    "https://blogs.nvidia.com/blog/geforce-now-thursday-community-war-thunder-reward": "2026-11-26T17:32:10Z",
     "https://cnbc.com/2026/11/23/anthropic-nvidia-shares.html": "2026-11-24T08:00:48Z",
     "https://cnbc.com/2026/11/23/jim-cramer-nvidia-jensen-huang-ceo-return.html": "2026-11-24T08:00:48Z",
     "https://deepmind.google/blog/introducing-gemini-4-hydrogen": "2026-11-12T23:46:52Z",
