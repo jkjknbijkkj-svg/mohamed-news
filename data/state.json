@@ -13,9 +13,6 @@
     }
   ],
   "llm_usage": {
-    "2026-11-14": {
-      "gemini-3.6-flash": 1
-    },
     "2026-11-20": {
       "gemini-3.6-flash": 1
     },
@@ -33,6 +30,9 @@
     },
     "2026-11-25": {
       "gemini-3.6-flash": 7
+    },
+    "2026-11-26": {
+      "gemini-3.6-flash": 1
     }
   },
   "pending": {},
@@ -471,6 +471,28 @@
       "summary": "طور باحثون في Google Research إطار عمل يعتمد على المحاكاة المتعددة الوكلاء لقياس استنتاج نماذج LLMs للدوافع الخفية. وتستند الأداة إلى تقييم قدرة المساعد الرقمي على تحليل الروايات الذاتية للمستخدمين. وأظهر اختبار 12 نموذجاً أن انحياز السرد يجعل التفكير الاجتماعي أكثر صعوبة مقارنة بالبشر. كما تم إتاحة الإطار ومجموعة بيانات تضم 20 ألف مثال كمصدر مفتوح.",
       "timestamp": "2026-11-26T08:10:11Z",
       "title": "Verifiable Social Reasoning for LLM Assistants"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-26",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "رقائق_إلكترونية",
+        "قيود_تجارية",
+        "تكنولوجيا"
+      ],
+      "headline": "Nvidia تطلب وقف شحنات الخوادم إلى أربع دول آسيوية إثر القيود الأمريكية",
+      "ig_media_id": "18018164207755275",
+      "permalink": "https://www.instagram.com/p/DgNEPMsDkvy/",
+      "slot": "s1230",
+      "source_name": "The Decoder",
+      "source_urls": [
+        "https://thenextweb.com/news/nvidia-halts-server-shipments-southeast-asia",
+        "https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls"
+      ],
+      "summary": "وجهت Nvidia شركاءها مثل Dell وSupermicro بإيقاف إرسال الخوادم إلى ماليزيا وسنغافورة وثايلاند وإندونيسيا. تهدف الضوابط الأمريكية الجديدة إلى منع الشركات الصينية من استخدام المزودين السحابيين الأجانب للوصول إلى رقائق B300 المتطورة. تسببت هذه القرارات في تعليق قروض بنكية بقيمة 500 مليون دولار لشركة Aolani الموردة لشركة ByteDance.",
+      "timestamp": "2026-11-26T12:06:39Z",
+      "title": "Nvidia halts server shipments to Malaysia, Singapore, Thailand, and Indonesia after tighter US export controls"
     }
   ],
   "seen_urls": {
@@ -497,6 +519,8 @@
     "https://research.google/blog/verifiable-social-reasoning-for-llm-assistants": "2026-11-26T08:10:11Z",
     "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo": "2026-11-24T08:00:48Z",
     "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo": "2026-11-24T08:00:48Z",
+    "https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls": "2026-11-26T12:06:39Z",
+    "https://thenextweb.com/news/nvidia-halts-server-shipments-southeast-asia": "2026-11-26T12:06:39Z",
     "https://theverge.com/policy/1041270/nvidia-megaspeed-commerce-dept-entity-list": "2026-11-24T17:28:10Z",
     "https://wired.com/story/jensen-huang-is-back-as-nvidia-ceo": "2026-11-24T08:00:48Z"
   },
