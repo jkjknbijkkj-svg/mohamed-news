@@ -32,7 +32,7 @@
       "gemini-3.6-flash": 2
     },
     "2026-11-25": {
-      "gemini-3.6-flash": 6
+      "gemini-3.6-flash": 7
     }
   },
   "pending": {},
@@ -450,6 +450,27 @@
       "summary": "يقوم Craft Anything بفحص المواقع والتطبيقات والألعاب لتعلم كيفية عملها، ثم يوجه وكيل برمجة لبناء مشروع جديد. يعتمد المحرك على أربع مراحل تشمل الدراسة والبناء والتحقق والجاهزية. كما يتيح العمل بنظام Clean room أو الوضع العميق Deep.",
       "timestamp": "2026-11-25T20:25:31Z",
       "title": "storytold/craft-anything"
+    },
+    {
+      "category": "ai",
+      "date": "2026-11-26",
+      "hashtags": [
+        "الذكاء_الاصطناعي",
+        "أبحاث_التكنولوجيا",
+        "التفكير_الاجتماعي",
+        "نماذج_اللغة"
+      ],
+      "headline": "Google Research تقدم إطاراً جديداً لتقييم قدرات التفكير الاجتماعي لنماذج LLMs",
+      "ig_media_id": "17920340775549735",
+      "permalink": "https://www.instagram.com/p/DgMpLrUDc_X/",
+      "slot": "s0800",
+      "source_name": "Google Research",
+      "source_urls": [
+        "https://research.google/blog/verifiable-social-reasoning-for-llm-assistants"
+      ],
+      "summary": "طور باحثون في Google Research إطار عمل يعتمد على المحاكاة المتعددة الوكلاء لقياس استنتاج نماذج LLMs للدوافع الخفية. وتستند الأداة إلى تقييم قدرة المساعد الرقمي على تحليل الروايات الذاتية للمستخدمين. وأظهر اختبار 12 نموذجاً أن انحياز السرد يجعل التفكير الاجتماعي أكثر صعوبة مقارنة بالبشر. كما تم إتاحة الإطار ومجموعة بيانات تضم 20 ألف مثال كمصدر مفتوح.",
+      "timestamp": "2026-11-26T08:10:11Z",
+      "title": "Verifiable Social Reasoning for LLM Assistants"
     }
   ],
   "seen_urls": {
@@ -473,6 +494,7 @@
     "https://openai.com/index/perplexity-and-intelligence": "2026-11-23T08:08:56Z",
     "https://research.google/blog/advancing-science-engineering-with-antigravitys-teamwork-feature": "2026-11-14T07:47:06Z",
     "https://research.google/blog/how-google-duplex-evolved-to-also-call-businesses-for-you-in-gemini": "2026-11-21T11:49:05Z",
+    "https://research.google/blog/verifiable-social-reasoning-for-llm-assistants": "2026-11-26T08:10:11Z",
     "https://techcrunch.com/2026/11/23/jensen-huang-scheduled-to-testify-next-week-in-senate-following-reinstatement-as-nvidia-ceo": "2026-11-24T08:00:48Z",
     "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo": "2026-11-24T08:00:48Z",
     "https://theverge.com/policy/1041270/nvidia-megaspeed-commerce-dept-entity-list": "2026-11-24T17:28:10Z",
