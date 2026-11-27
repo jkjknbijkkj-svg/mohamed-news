@@ -24,7 +24,7 @@ from .config import (
 from .igtoken import TokenError, maybe_refresh, validate_token
 from .llm import LLMClient
 from .pipeline import NoContent, build_plan
-from .publish import InstagramPublisher
+from .publish import InstagramPublisher, IntegrityBlockError
 from .render import Renderer
 from .slots import category_for, load_slots, resolve_slot, scheduled_at, slot_by_id
 from .state import (
@@ -98,7 +98,24 @@ def _handle_failure(
         f"الموعد: {slot_id} ({date_iso})\nالمرحلة: {stage}\n"
         f"السبب: {html.escape(message)}\nإخفاقات متتالية: {failures}",
     )
-    if failures >= MAX_FAILURES_BEFORE_PAUSE:
+    # An integrity block (code 4 / subcode 2207051) is Instagram's anti-spam flag, not a
+    # quota or a transient error: it does not clear by retrying, and every further attempt
+    # adds more flagged activity. Pause on the first occurrence instead of waiting for the
+    # three-strike auto-pause.
+    if isinstance(exc, IntegrityBlockError):
+        set_paused(f"Integrity block (4/2207051) at {to_iso(now_utc())}")
+        notify.send(
+            settings,
+            "⛔ <b>حظر سلامة من إنستغرام (ليس حدًّا للنشر)</b>\n"
+            "رمز الخطأ 4 / 2207051 يعني «نقيّد بعض الأنشطة لحماية المجتمع» — "
+            "حظر مكافحة سبام وليس تجاوزًا لعدد المنشورات، والانتظار وحده قد لا يكفي.\n"
+            "أوقفتُ النشر تلقائيًا. الخطوات:\n"
+            "1) افتح حساب إنستغرام يدويًا وابحث عن تنبيه «قيّدنا بعض نشاطك» وأكمل أي مراجعة مطلوبة.\n"
+            "2) لا تنشر آليًا لمدة 24–48 ساعة.\n"
+            "3) تأكّد من صلاحية رمز الوصول وصلاحياته.\n"
+            "بعد ذلك احذف الملف data/PAUSED من المستودع لاستئناف النشر.",
+        )
+    elif failures >= MAX_FAILURES_BEFORE_PAUSE:
         set_paused(f"Paused after {failures} consecutive failures at {to_iso(now_utc())}")
         notify.send(
             settings,
