@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import logging
 import time
+from datetime import datetime, timedelta
 from typing import Any
 
 import requests
@@ -23,6 +24,16 @@ class PublishError(Exception):
 
 class QuotaError(PublishError):
     """The daily publishing quota is exhausted."""
+
+
+class IntegrityBlockError(PublishError):
+    """Instagram flagged the publishing action (code 4 / subcode 2207051).
+
+    Despite the "Application request limit reached" wording this is an integrity
+    (anti-spam) block, not a quota: the response carries is_transient=false and
+    retrying quickly does not help and can make the flag worse. Publishing should
+    pause until the account side is cleared.
+    """
 
 
 class InstagramPublisher:
@@ -66,13 +77,16 @@ class InstagramPublisher:
                 body = {}
             if response.status_code >= 400 or "error" in body:
                 error = body.get("error", {})
-                raise PublishError(
-                    redact(
-                        f"HTTP {response.status_code} code={error.get('code')} "
-                        f"sub={error.get('error_subcode')}: "
-                        f"{error.get('message', response.text[:200])}"
-                    )[:400]
-                )
+                code = error.get("code")
+                subcode = error.get("error_subcode")
+                message = redact(
+                    f"HTTP {response.status_code} code={code} "
+                    f"sub={subcode}: "
+                    f"{error.get('message', response.text[:200])}"
+                )[:400]
+                if code == 4 and subcode == 2207051:
+                    raise IntegrityBlockError(message)
+                raise PublishError(message)
             return body
         raise PublishError("request failed")
 
@@ -146,6 +160,47 @@ class InstagramPublisher:
         except PublishError:
             return ""
 
+    def _find_recent_publish(self, caption: str, since: datetime) -> str | None:
+        """Return the id of a post that is already live for this publish attempt.
+
+        Instagram can answer media_publish with a 403 (code 4 / subcode 2207051) while
+        still creating the post. This reconciles that case so the slot is recorded once,
+        instead of being reported as a failure and risking a duplicate on the next run.
+
+        A post is considered a match when its caption starts with the same text; when
+        Instagram does not return a caption, a post created at/after `since` (minus a two
+        minute margin) is accepted instead.
+        """
+        window_start = since - timedelta(minutes=2)
+        try:
+            body = self._call(
+                "GET",
+                f"{self.s.ig_user_id}/media",
+                params={"fields": "id,caption,timestamp", "limit": 5},
+            )
+        except PublishError:
+            return None
+        head = caption.strip()[:60]
+        for row in body.get("data", []):
+            media_id = row.get("id")
+            if not media_id:
+                continue
+            cap = (row.get("caption") or "").strip()
+            if head and cap:
+                if cap.startswith(head):
+                    return str(media_id)
+                continue
+            stamp = row.get("timestamp")
+            if not stamp:
+                continue
+            try:
+                created = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+            except ValueError:
+                continue
+            if created >= window_start:
+                return str(media_id)
+        return None
+
     def publish_post(
         self,
         image_urls: list[str],
@@ -176,9 +231,24 @@ class InstagramPublisher:
             state.set_pending(date_iso, slot_id, {"creation_id": creation_id, "created_at": to_iso(now_utc())})
             state.save()
         self.wait_ready(creation_id)
-        media_id = self._call(
-            "POST", f"{self.s.ig_user_id}/media_publish", data={"creation_id": creation_id}
-        )["id"]
+        attempt_started = now_utc()
+        try:
+            media_id = self._call(
+                "POST", f"{self.s.ig_user_id}/media_publish", data={"creation_id": creation_id}
+            )["id"]
+        except PublishError as exc:
+            # Instagram sometimes returns a 403 (notably code 4 / subcode 2207051) even
+            # though media_publish created the post. Before treating this as a failure,
+            # check whether a matching post is already live.
+            recovered = self._find_recent_publish(caption, attempt_started)
+            if recovered is None:
+                raise
+            log.warning(
+                "media_publish reported an error (%s) but the post is live (%s); recovering",
+                exc,
+                recovered,
+            )
+            media_id = recovered
         return {"ig_media_id": str(media_id), "permalink": self.permalink(str(media_id))}
 
     def media_insights(self, media_id: str) -> dict[str, int]:
